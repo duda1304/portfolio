@@ -10,4 +10,5 @@ $.each(skills, function(){
 							<img src="./images/${this.toLowerCase()}.png"></img>
 							<p class="mb-0">${this}</p>
 						</div>`)
-})
+});
+

@@ -11,8 +11,16 @@ main {
     margin-top: 100px;
 }
 
-.demo {
-    box-shadow: 0 10px 6px -6px #777;
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.demo .carousel, .demo video {
+    box-shadow: 0 0 6px #777;
 }
 
 footer {
@@ -37,6 +45,7 @@ footer a {
     max-width: 50px;
 }
 
+
 .technologies p {
     margin-bottom: 0px;
 }
@@ -47,9 +56,20 @@ footer a {
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .data {
-        border-right: 1px black dashed;
-    }
+.carousel-indicators {
+    bottom: -15%;
 }
 
+.carousel-indicators > button, .carousel-indicators > button.active {
+    /* width: 100px;
+    height: 25px;
+    border-radius: 0; */
+    width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+    border: solid 1px grey !important;
+    background: white !important;
+}
+.carousel-indicators > button.active {
+    background: grey !important;
+}

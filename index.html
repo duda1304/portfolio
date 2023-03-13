@@ -28,7 +28,7 @@
                     <a class="nav-link" href="#work">WORK</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT</a>
+                    <a class="nav-link" href="#contact">CONTACT</a>
                   </li>
                 </ul>
               </div>
@@ -36,14 +36,14 @@
           </nav>
     </header>
     <main class="container d-flex flex-column">
-        <section class="skills w-100 pt-5 pb-5 d-flex flex-wrap row row-cols-5 justify-content-center" id="skills">
+        <section class="skills w-100 pt-5 d-flex flex-wrap row row-cols-5 justify-content-center" id="skills">
         </section>
         <small><a target="_blank" href="https://icons8.com/icon/gFw7X5Tbl3ss/material-ui">Material Ui</a> icons by <a target="_blank" href="https://icons8.com">Icons8</a></small>
         <section id="work">
           <section class="row w-100 pt-5 pb-5 align-items-center">
             <div class="col-12 col-lg-6 data">
               <h1>Text to speech conversion web application</h1>
-              <p><a>https://cumulustalk.com/welcome.html</a></p>
+              <p><a href="https://cumulustalk.com/welcome.html">https://cumulustalk.com/welcome.html</a></p>
               <h2>Full stack development</h2>
               <div class="technologies p-3">
                   <p><b>HTML, CSS, JavaScript, PHP, MySQL</b></p>
@@ -58,8 +58,8 @@
                   <p>Lenght of text, option to store text and audio data, count of conversions and usage of advnace settings panel are limited and depending on subscription type.</p>
               </div>
             </div>
-            <div class="pt-3 col-12 col-lg-6 demo">
-              <video src="https://cumulustalk.com/vids/CumulusTalk1.mp4" controls class="w-100"></video>
+            <div class="mt-5 mt-lg-0 col-12 col-lg-6 demo">
+              <video src="https://cumulustalk.com/vids/CumulusTalk1.mp4" controls class="w-100" onloadstart="this.volume=0.05"></video>
             </div>
           </section>
           <section class="row w-100 pt-5 pb-5 align-items-center">
@@ -67,8 +67,8 @@
               <h1>Internal web based app for charity clinic in Namibia</h1>
               <h2>Full stack development</h2>
               <div class="technologies p-3">
-                  <p><b>HTML, CSS, JavaScript, PHP, MySQL</b></p>
-                  <p>- admin data management panel</p>
+                  <p><b>HTML, CSS, Bootstrap, JavaScript, React, PHP, MySQL</b></p>
+                  <p>Admin data management panel</p>
               </div>
               <div class="description bg-dark text-white opacity-75 p-3">
                   <p>Internal web application for Lifeline Clinic in Namibia for purposes of running patients database, ailment and attendance history, feeding program and outreach program database.</p>
@@ -77,14 +77,14 @@
                   <p>Design in simple and clean with data entry enabled by using keyboard to simulate desktop software (enter, tab, ...).</p> 
               </div>
             </div>
-            <div class="pt-3 col-12 col-lg-6 demo">
-              <div id="carousel_advent" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel">
+            <div class="mt-5 mt-lg-0 col-12 col-lg-6 demo">
+              <div id="carousel_clinic" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carousel_clinic" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carousel_clinic" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carousel_clinic" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carousel_clinic" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carousel_clinic" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -103,63 +103,78 @@
                     <img src="./images/charity_5.png" class="d-block w-100" alt="charity clinic">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_advent" data-bs-slide="prev">
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel_clinic" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel_advent" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel_clinic" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
-                </button>
+                </button> -->
               </div>
-              <!-- <div id="carousel-clinic" class="carousel slide" data-bs-ride="carousel">
+            </div>
+          </section>
+          <section class="row w-100 pt-5 pb-5 align-items-center">
+            <div class="col-12 col-lg-6 data">
+              <h1>Web app to sell products as addition to existing dating site</h1>
+              <h2>Full stack development</h2>
+              <div class="technologies p-3">
+                  <p><b>HTML, CSS, Bootstrap, JavaScript, PHP, Yii, MySQL</b></p>
+                  <p>QR code generator</p>
+                  <p>QR code reader and redeem system</p>
+                  <p>Yii (PHP framework) template adjustments for admin</p>
+              </div>
+              <div class="description bg-dark text-white opacity-75 p-3">
+                  <p>Web app for merchants to upload products to existin gdating site.</p>
+                  <p>Sell of products on dating site with QR code generated for each purchase.</p>
+                  <p>Physical products are sell in stores by redeem of QR code.</p>
+              </div>
+            </div>
+            <div class="mt-5 mt-lg-0 col-12 col-lg-6 demo">
+              <div id="carousel_datingsite" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carousel_datingsite" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carousel_datingsite" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carousel_datingsite" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carousel_datingsite" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="./images/charity_1.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/datingsite_1.png" class="d-block w-100" alt="dating site">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_2.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/datingsite_2.png" class="d-block w-100" alt="dating site">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_3.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/datingsite_3.png" class="d-block w-100" alt="dating site">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_4.png" class="d-block w-100" alt="charity clinic">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./images/charity_5.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/datingsite_4.png" class="d-block w-100" alt="dating site">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-clinic" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-clinic" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div> -->
+              </div>
             </div>
           </section>
           <section class="row w-100 pt-5 pb-5 align-items-center">
             <div class="col-12 col-lg-6 data">
               <h1>Advent calendar web application</h1>
-              <p><a>https://formation.stepforward-education.fr/</a></p>
+              <p><a href="https://formation.stepforward-education.fr/">https://formation.stepforward-education.fr/</a></p>
               <h2>Full stack development</h2>
               <div class="technologies p-3">
-                  <p><b>HTML, CSS, JavaScript, PHP, MySQL</b></p>
-                  <p>- crosswords</p>
-                  <p>- image mapping</p>
+                  <p><b>HTML, CSS, Boostrap, JavaScript, PHP, MySQL</b></p>
+                  <p>Crosswords</p>
+                  <p>Image mapping</p>
+                  <p>Shopify API</p>
               </div>
               <div class="description bg-dark text-white opacity-75 p-3">
                   <p>Interactive advent calendar with games for kids to learn English.</p>
-                  <p>Game is sold on Shopify.</p>
+                  <p>Game is sold on Shopify. Purchases are connected to web app via Shopify API.</p>
                   <p>Login with payed accounts.</p>
                   <p>Games with writing answers, listening for audio extracts, crosswords, drag and drop games, lot of clickable areas.</p> 
               </div>
             </div>
-            <div class="pt-3 col-12 col-lg-6 demo">
-              <div id="carousel_advent" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel">
+            <div class="mt-5 mt-lg-0 col-12 col-lg-6 demo">
+              <div id="carousel_advent" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -167,7 +182,7 @@
                   <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="3" aria-label="Slide 4"></button>
                   <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="4" aria-label="Slide 5"></button>
                   <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="7" aria-label="Slide 7"></button>
+                  <button type="button" data-bs-target="#carousel_advent" data-bs-slide-to="6" aria-label="Slide 7"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -192,48 +207,71 @@
                     <img src="./images/advent_7.png" class="d-block w-100" alt="advent game">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_advent" data-bs-slide="prev">
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel_advent" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carousel_advent" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
-                </button>
+                </button> -->
               </div>
-              <!-- <div id="carousel-clinic" class="carousel slide" data-bs-ride="carousel">
+            </div>
+          </section>
+          <section class="row w-100 pt-5 pb-5 align-items-center">
+            <div class="col-12 col-lg-6 data">
+              <h1>Alphabet game for kids</h1>
+              <p><a href="https://formation.stepforward-education.fr/amazing-english/">https://formation.stepforward-education.fr/amazing-english/</a></p>
+              <h2>Full stack development</h2>
+              <div class="technologies p-3">
+                  <p><b>HTML, CSS, Boostrap, JavaScript, PHP, MySQL</b></p>
+                  <p>Game platform for multiuser accounts</p>
+                  <p>Avatars, custom animation</p>
+                  <p>Shopify API</p>
+              </div>
+              <div class="description bg-dark text-white opacity-75 p-3">
+                  <p>Interactive games for kids to learn English.</p>
+                  <p>Game is sold on Shopify. Purchases are connected to web app via Shopify API.</p>
+                  <p>Login with payed single or multiuser accounts.</p>
+              </div>
+            </div>
+            <div class="mt-5 mt-lg-0 col-12 col-lg-6 demo">
+              <div id="carousel_alphabet" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carousel_alphabet" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carousel_alphabet" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carousel_alphabet" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carousel_alphabet" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carousel_alphabet" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carousel_alphabet" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="./images/charity_1.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/alphabet_1.png" class="d-block w-100" alt="alphabet game">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_2.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/alphabet_2.png" class="d-block w-100" alt="alphabet game">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_3.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/alphabet_3.png" class="d-block w-100" alt="alphabet game">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_4.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/alphabet_4.png" class="d-block w-100" alt="alphabet game">
                   </div>
                   <div class="carousel-item">
-                    <img src="./images/charity_5.png" class="d-block w-100" alt="charity clinic">
+                    <img src="./images/alphabet_5.png" class="d-block w-100" alt="alphabet game">
+                  </div>
+                  <div class="carousel-item">
+                    <video src="./images/alphabet_6.mov" class="d-block w-100" alt="alphabet game" autoplay controls>
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-clinic" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-clinic" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div> -->
+              </div>
             </div>
           </section>
         </section>
     </main>
-    <footer class="p-3 bg-dark text-white">
-        <p>Kontakt:</p>
+    <footer class="p-3 bg-dark text-white" id="contact">
+        <p>Contact</p>
         <p class="mb-0">Tel: <a href="tel:00385998156084">0998156084</a></p>
         <p>Email: <a href="mailto:dubravkaspoljaric@gmail.com">dubravkaspoljaric@gmail.com</a></p>
     </footer>
