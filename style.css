@@ -1,0 +1,55 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+header {
+    opacity: 0.90;
+    height: 100px;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.demo {
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+footer {
+    opacity: 0.90;
+}
+
+footer a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.skills img {
+    max-width: 50px;
+}
+
+.technologies p {
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 576px) {
+    .skills p {
+      font-size: 0.8em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .data {
+        border-right: 1px black dashed;
+    }
+}
+
