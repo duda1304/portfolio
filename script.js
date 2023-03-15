@@ -1,6 +1,7 @@
 $( '.navbar-nav a' ).on( 'click', function () {
 	$( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
 	$( this ).parent( 'li' ).addClass( 'active' );
+	$('.navbar-toggler').click();
 });
 
 const skills = ["HTML5", "CSS3", "Bootstrap", "MaterialUI", "JavaScript", "ReactJS", "AngularJS", "jQuery", "NodeJS", "ExpressJS", "JSON", "npm", "PHP", "MySQL", "DigitalOcean"];
