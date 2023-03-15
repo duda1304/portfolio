@@ -44,6 +44,10 @@ footer a {
     box-shadow: none;
 }
 
+.nav-item.active .nav-link {
+    color: white;
+}
+
 .skills img {
     max-width: 50px;
 }
