@@ -16,7 +16,7 @@ export type Project = {
 };
 
 export const skills = [
-  "PHP", "Yii", "MySQL",
+  "PHP", "MySQL",
   "Node.js", "Express", "Socket.io",
   "React", "Next.js", "React Native",
   "Angular", "AngularJS",
@@ -117,6 +117,7 @@ const projectCatalog: Project[] = [
       "Renders AutoCAD models in 3D via the Autodesk SDK, with optional logo branding.",
       "Subscription-based user management with admin and user panels.",
       "Option to share rendered models.",
+      "Stripe payment integration.",
     ],
     media: [1, 2].map((number) => ({ src: `/images/autodesk_${number}.webp`, type: "image", alt: `Autodesk 3D viewer screen ${number}` })),
   },
@@ -162,8 +163,9 @@ const projectCatalog: Project[] = [
     category: "Full-stack development",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "React", "Node.js", "Express"],
     bullets: [
-      "Flight search with a React + Three.js globe visualization.",
-      "WebSocket chat and Google Places autocomplete for user entries.",
+      "Flight data visualization with a React + Three.js globe using real NASA imagery.",
+      "Real-time chat implementation using WebSocket.",
+      "Integration of Google Places API, real-time flight data API.",
     ],
     note: "Further details are not presented due to an NDA.",
     media: [{ src: "/images/visualization_1.webm", type: "video", alt: "Flight data visualization demonstration" }],
@@ -174,10 +176,10 @@ const projectCatalog: Project[] = [
     category: "Full-stack development",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node.js", "Express", "Socket.io"],
     bullets: [
-      "Editor and control system for interactive multimedia shows across multiple displays.",
+      "Development of custom control system for specific multimedia and synchronized multiple displays show (Lead by ideas of the main artist).",
       "Audience connects by smartphone to interact with on-stage displays.",
       "Layered media editor (images, video, live streams, audio, text, QR codes) with Photoshop-style layers.",
-      "Two built-in games the audience controls with their phones.",
+      "Two built-in video games the audience controls with their phones.",
     ],
     media: [1, 2].map((number) => ({ src: `/images/artproject_${number}.webm`, type: "video", alt: `Interactive multimedia application demonstration ${number}` })),
   },
@@ -190,6 +192,7 @@ const projectCatalog: Project[] = [
       "Interactive Advent calendar of games for children learning English.",
       "Written answers, audio listening, crosswords, drag-and-drop and clickable activities.",
       "Answer checking and user progress tracking.",
+      "Integration with Shopify purchases.",
     ],
     url: "https://formation.stepforward-education.fr/",
     media: [1, 2, 3, 4, 5, 6, 7].map((number) => ({ src: `/images/advent_${number}.webp`, type: "image", alt: `Advent calendar game screen ${number}` })),
@@ -202,7 +205,9 @@ const projectCatalog: Project[] = [
     bullets: [
       "Interactive English-learning games for children.",
       "Sold via Shopify, with purchases linked through the Shopify API and an HTML invite email.",
-      "Registration, login and password-reset flows for single- and multi-user accounts.",
+      "Integration of subscription-based purchases.",
+      "User management system for single- and multi-user accounts.",
+      "User progress tracking, awards and bonus hints system.",
     ],
     url: "https://formation.stepforward-education.fr/amazing-english/",
     media: [
@@ -260,7 +265,7 @@ const projectCatalog: Project[] = [
     category: "Frontend development",
     technologies: ["HTML", "CSS", "JavaScript"],
     bullets: [
-      "Frontend work across multiple client web projects.",
+      "Frontend development.",
       "UI implementation, responsive layouts and interactive features.",
     ],
     url: "https://wmd.hosting/portfolio",
@@ -273,7 +278,6 @@ const projectCatalog: Project[] = [
     technologies: ["PHP"],
     bullets: [
       "Added a dynamic table-viewer page to an existing platform for subscribed clients.",
-      "PHP parses URL parameters to display the relevant content.",
     ],
     url: "https://aarghsoftware.com",
     media: [{ src: "/images/aargh_1.webp", type: "image", alt: "Aargh Software dynamic table viewer screen" }],

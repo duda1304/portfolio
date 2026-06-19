@@ -6,6 +6,7 @@ import { highlights, projects, skills } from "../data/portfolio";
 
 const title = "Dubravka | Full Stack Dev";
 const description = "Full-stack developer building web applications, payment and API integrations, data visualizations, and interactive digital experiences.";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -31,8 +32,8 @@ const description = "Full-stack developer building web applications, payment and
         </p>
         <figure class="hero-artwork">
           <img
-            src="/images/retro-computer-hero-600.webp"
-            srcset="/images/retro-computer-hero-192.webp 192w, /images/retro-computer-hero-384.webp 384w, /images/retro-computer-hero-600.webp 600w"
+            src={`${baseUrl}images/retro-computer-hero-600.webp`}
+            srcset={`${baseUrl}images/retro-computer-hero-192.webp 192w, ${baseUrl}images/retro-computer-hero-384.webp 384w, ${baseUrl}images/retro-computer-hero-600.webp 600w`}
             sizes="(max-width: 640px) 96px, (max-width: 968px) 31vw, 300px"
             width="600"
             height="400"
