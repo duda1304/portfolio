@@ -1,0 +1,194 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MediaCarousel from "../components/MediaCarousel.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { highlights, projects, skills } from "../data/portfolio";
+
+const title = "Dubravka | Full Stack Dev";
+const description = "Full-stack developer building web applications, payment and API integrations, data visualizations, and interactive digital experiences.";
+---
+
+<BaseLayout title={title} description={description}>
+  <header class="sticky top-0 z-50 border-b border-line/80 bg-canvas/90 backdrop-blur-md">
+    <nav class="shell flex min-h-16 items-center justify-between gap-6" aria-label="Primary navigation">
+      <a href="#top" class="flex shrink-0 items-center gap-2 text-sm font-semibold text-ink no-underline">
+        <span class="hidden text-accent sm:inline">LET'S BUILD SOMETHING</span>
+      </a>
+      <div class="flex items-center gap-4 text-[0.7rem] sm:gap-7 sm:text-xs">
+        <a class="quiet-link" href="#about">ABOUT</a>
+        <a class="quiet-link" href="#skills">SKILLS</a>
+        <a class="quiet-link" href="#projects">PROJECTS</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- hero -->
+    <section class="hero-section shell pb-8 pt-8 sm:pb-28 sm:pt-32">
+      <div class="hero-row">
+        <p class="hero-kicker inline-flex self-start rounded-full border border-line-strong bg-surface px-3 py-2 text-[0.68rem] uppercase leading-none text-accent sm:text-xs">
+          Full-Stack Developer
+        </p>
+        <figure class="hero-artwork">
+          <img
+            src="/images/retro-computer-hero-600.webp"
+            srcset="/images/retro-computer-hero-192.webp 192w, /images/retro-computer-hero-384.webp 384w, /images/retro-computer-hero-600.webp 600w"
+            sizes="(max-width: 640px) 96px, (max-width: 968px) 31vw, 300px"
+            width="600"
+            height="400"
+            alt="Comic-style retro computer with JavaScript code on its CRT screen and a full keyboard"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </figure>
+      </div>
+      <div class="hero-copy mt-8">
+        <h1 class="text-[clamp(2.2rem,7vw,4rem)] font-semibold leading-[1.02] tracking-[-0.055em] text-ink">Hi, I'm Dubravka</h1>
+        <p class="mt-10 max-w-[590px] text-lg leading-relaxed tracking-tight text-ink sm:text-2xl sm:leading-relaxed">
+          I build full-stack web applications end to end, from payment and API integrations to real-time features, data visualizations, and interactive, creative digital experiences.
+        </p>
+        <p class="mt-5 max-w-[590px] text-sm leading-relaxed text-ink-muted sm:text-base">
+          Working across the stack with React, React Native, Angular, modern JavaScript and PHP, I turn detailed designs and product ideas into polished, reliable products.
+        </p>
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section id="skills" class="shell scroll-mt-24 py-20 sm:py-24">
+      <SectionHeading label="skills" />
+      <div class="flex flex-wrap gap-2">
+        {skills.map((skill) => <span class="tag">{skill}</span>)}
+      </div>
+    </section>
+
+    <!-- about / highlights -->
+    <section id="about" class="shell scroll-mt-24 py-20 sm:py-24" aria-labelledby="expertise-heading">
+      <div id="expertise-heading"><SectionHeading label="areas of work" detail="what I can do for you" /></div>
+      <ul class="grid gap-3 text-sm leading-relaxed text-ink-muted sm:grid-cols-2 sm:gap-x-14">
+        {highlights.slice(0, 4).map((item) => (
+          <li class="flex gap-3"><span class="text-ink-faint" aria-hidden="true">+</span>{item}</li>
+        ))}
+      </ul>
+      {highlights.length > 4 && (
+        <>
+          <ul id="more-highlights" data-more hidden class="mt-3 grid gap-3 text-sm leading-relaxed text-ink-muted sm:grid-cols-2 sm:gap-x-14">
+            {highlights.slice(4).map((item) => (
+              <li class="flex gap-3"><span class="text-ink-faint" aria-hidden="true">+</span>{item}</li>
+            ))}
+          </ul>
+          <button type="button" class="quiet-link mt-8 inline-flex items-center gap-1.5 text-xs leading-none" data-toggle-more aria-expanded="false" aria-controls="more-highlights">
+            <span data-more-label>show more</span>
+            <svg aria-hidden="true" class="block size-3 shrink-0" viewBox="0 0 12 12" fill="none">
+              <path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </>
+      )}
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="shell scroll-mt-24 py-20 sm:py-24">
+      <SectionHeading label="projects" detail={`${String(projects.length).padStart(2, "0")} selected`} />
+      <div>
+        {projects.map((project, index) => {
+          const hasMedia = Boolean(project.media && project.media.length > 0);
+          return (
+            <article id={project.id} class="scroll-mt-24 border-b border-line py-8">
+              <div class="grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-8">
+                <span class="order-1 text-right text-xs text-accent sm:order-2">{String(index + 1).padStart(2, "0")}</span>
+                <div class="order-2 min-w-0 sm:order-1">
+                  <p class="mb-2 text-xs uppercase tracking-[0.14em] text-ink-faint">{project.category}</p>
+                  <h3 class="text-lg font-semibold leading-relaxed text-ink sm:text-2xl">{project.title}</h3>
+                  <ul class="mt-3 space-y-1.5 text-sm leading-relaxed text-ink sm:text-base">
+                    {project.bullets.map((bullet) => (
+                      <li class="flex gap-3"><span class="text-ink-faint" aria-hidden="true">+</span>{bullet}</li>
+                    ))}
+                    {project.note && <li class="italic text-ink-faint">{project.note}</li>}
+                  </ul>
+                  {project.technologies.length > 0 && (
+                    <div class="mt-4 flex flex-wrap gap-2">{project.technologies.map((technology) => <span class="tag">{technology}</span>)}</div>
+                  )}
+                  {(project.url || hasMedia) && (
+                    <div class="mt-4 flex items-center text-xs">
+                      {hasMedia && (
+                        <button type="button" class="external-link cursor-pointer border-0 bg-transparent p-0" data-expand aria-expanded="false" aria-controls={`media-${project.id}`}>
+                          <span class="text-accent" data-expand-label>view</span>
+                        </button>
+                      )}
+                      {project.url && <a class="external-link ml-auto" href={project.url} target="_blank" rel="noreferrer">visit site <span aria-hidden="true">↗</span></a>}
+                    </div>
+                  )}
+                  {hasMedia && (
+                    <div id={`media-${project.id}`} data-detail hidden class="mt-6 max-w-xl">
+                      <MediaCarousel media={project.media!} label={project.title} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12">
+    <div class="shell text-center">
+      <p class="text-xs text-ink-faint">2026 Dubravka Spoljaric</p>
+    </div>
+  </footer>
+</BaseLayout>
+
+<script>
+  {
+  // section heading scroll reveal
+  const revealHeadings = document.querySelectorAll<HTMLElement>("[data-reveal-heading]");
+
+  if ("IntersectionObserver" in window) {
+    const headingObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.25, rootMargin: "0px 0px -8%" });
+
+    revealHeadings.forEach((heading) => headingObserver.observe(heading));
+  } else {
+    revealHeadings.forEach((heading) => heading.classList.add("is-visible"));
+  }
+
+  // project media view/hide
+  const toggles = document.querySelectorAll<HTMLButtonElement>("[data-expand]");
+  toggles.forEach((toggle) => {
+    const targetId = toggle.getAttribute("aria-controls");
+    const detail = targetId ? document.getElementById(targetId) : null;
+    const label = toggle.querySelector<HTMLElement>("[data-expand-label]");
+    if (!detail) return;
+    toggle.addEventListener("click", () => {
+      const isOpen = !detail.hidden;
+      detail.hidden = isOpen;
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      if (label) {
+        label.textContent = isOpen ? "view" : "hide";
+        label.classList.toggle("text-accent", isOpen);
+      }
+      if (isOpen) detail.querySelector("video")?.pause();
+    });
+  });
+
+  // highlights show more/less
+  const moreToggle = document.querySelector<HTMLButtonElement>("[data-toggle-more]");
+  const moreTarget = document.getElementById("more-highlights");
+  if (moreToggle && moreTarget) {
+    const moreLabel = moreToggle.querySelector<HTMLElement>("[data-more-label]");
+    moreToggle.addEventListener("click", () => {
+      const isOpen = !moreTarget.hidden;
+      moreTarget.hidden = isOpen;
+      moreToggle.setAttribute("aria-expanded", String(!isOpen));
+      if (moreLabel) moreLabel.textContent = isOpen ? "show more" : "show less";
+    });
+  }
+  }
+</script>

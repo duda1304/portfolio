@@ -1,0 +1,60 @@
+---
+import type { ProjectMedia } from "../data/portfolio";
+
+interface Props {
+  media: ProjectMedia[];
+  label: string;
+}
+
+const { media, label } = Astro.props;
+const hasMultipleSlides = media.length > 1;
+---
+
+<div class="carousel" data-carousel tabindex="0" role="region" aria-label={`${label} media gallery`}>
+  <div class="overflow-hidden rounded-md border border-line bg-surface">
+    {media.map((item, index) => (
+      <figure data-slide hidden={index !== 0} class="aspect-4/3 w-full">
+        {item.type === "image" ? (
+          <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="h-full w-full object-contain" />
+        ) : (
+          <video src={item.src} aria-label={item.alt} controls preload="none" playsinline class="h-full w-full object-contain"></video>
+        )}
+      </figure>
+    ))}
+  </div>
+  {hasMultipleSlides && (
+    <div class="mt-3 flex items-center justify-between">
+      <p class="text-xs text-ink-faint" aria-live="polite"><span data-current>01</span> / {String(media.length).padStart(2, "0")}</p>
+      <div class="flex gap-2">
+        <button type="button" data-previous class="carousel-control" aria-label={`Previous image in ${label} gallery`}><span aria-hidden="true">←</span></button>
+        <button type="button" data-next class="carousel-control" aria-label={`Next image in ${label} gallery`}><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  )}
+</div>
+
+<script>
+  {
+  // prev/next slides + arrow keys
+  const carousels = document.querySelectorAll<HTMLElement>("[data-carousel]");
+  carousels.forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-slide]"));
+    const currentLabel = carousel.querySelector<HTMLElement>("[data-current]");
+    const previousButton = carousel.querySelector<HTMLButtonElement>("[data-previous]");
+    const nextButton = carousel.querySelector<HTMLButtonElement>("[data-next]");
+    let currentIndex = 0;
+    const showSlide = (newIndex: number) => {
+      slides[currentIndex]?.querySelector("video")?.pause();
+      currentIndex = (newIndex + slides.length) % slides.length;
+      slides.forEach((slide, index) => { slide.hidden = index !== currentIndex; });
+      if (currentLabel) currentLabel.textContent = String(currentIndex + 1).padStart(2, "0");
+    };
+    previousButton?.addEventListener("click", () => showSlide(currentIndex - 1));
+    nextButton?.addEventListener("click", () => showSlide(currentIndex + 1));
+    carousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") { event.preventDefault(); showSlide(currentIndex - 1); }
+      if (event.key === "ArrowRight") { event.preventDefault(); showSlide(currentIndex + 1); }
+    });
+  });
+  }
+</script>

@@ -1,0 +1,14 @@
+---
+interface Props {
+  label: string;
+  detail?: string;
+}
+
+const { label, detail } = Astro.props;
+---
+
+<!-- scroll reveal target for section headings -->
+<div data-reveal-heading class="mb-10 flex items-center justify-between gap-6 border-b border-line pb-6 text-sm sm:text-base">
+  <h2 class="font-normal uppercase tracking-[0.08em] text-accent">{label}</h2>
+  {detail && <span class="text-right text-ink-faint">{detail}</span>}
+</div>
