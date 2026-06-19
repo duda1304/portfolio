@@ -6,7 +6,7 @@ import { highlights, projects, skills } from "../data/portfolio";
 
 const title = "Dubravka | Full Stack Dev";
 const description = "Full-stack developer building web applications, payment and API integrations, data visualizations, and interactive digital experiences.";
-const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout title={title} description={description}>

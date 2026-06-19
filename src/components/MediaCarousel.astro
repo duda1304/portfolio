@@ -8,6 +8,7 @@ interface Props {
 
 const { media, label } = Astro.props;
 const hasMultipleSlides = media.length > 1;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <div class="carousel" data-carousel tabindex="0" role="region" aria-label={`${label} media gallery`}>
@@ -15,9 +16,9 @@ const hasMultipleSlides = media.length > 1;
     {media.map((item, index) => (
       <figure data-slide hidden={index !== 0} class="aspect-4/3 w-full">
         {item.type === "image" ? (
-          <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="h-full w-full object-contain" />
+          <img src={`${base}${item.src}`} alt={item.alt} loading="lazy" decoding="async" class="h-full w-full object-contain" />
         ) : (
-          <video src={item.src} aria-label={item.alt} controls preload="none" playsinline class="h-full w-full object-contain"></video>
+          <video src={`${base}${item.src}`} aria-label={item.alt} controls preload="none" playsinline class="h-full w-full object-contain"></video>
         )}
       </figure>
     ))}
