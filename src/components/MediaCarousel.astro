@@ -14,11 +14,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 <div class="carousel" data-carousel tabindex="0" role="region" aria-label={`${label} media gallery`}>
   <div class="overflow-hidden rounded-md border border-line bg-surface">
     {media.map((item, index) => (
-      <figure data-slide hidden={index !== 0} class="aspect-4/3 w-full">
+      <figure data-slide hidden={index !== 0} class="w-full">
         {item.type === "image" ? (
-          <img src={`${base}${item.src}`} alt={item.alt} loading="lazy" decoding="async" class="h-full w-full object-contain" />
+          <img src={`${base}${item.src}`} alt={item.alt} loading="lazy" decoding="async" class="block h-auto w-full" />
         ) : (
-          <video src={`${base}${item.src}`} aria-label={item.alt} controls preload="none" playsinline class="h-full w-full object-contain"></video>
+          <video src={`${base}${item.src}`} aria-label={item.alt} controls preload="metadata" playsinline class="block h-auto w-full"></video>
         )}
       </figure>
     ))}

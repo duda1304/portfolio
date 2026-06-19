@@ -18,9 +18,10 @@ export type Project = {
 export const skills = [
   "PHP", "MySQL",
   "Node.js", "Express", "Socket.io",
+  "TypeScript", "JavaScript",
   "React", "Next.js", "React Native",
   "Angular", "AngularJS",
-  "TypeScript", "JavaScript", "jQuery",
+  "jQuery",
   "Three.js", "Astro",
   "Tailwind CSS", "Bootstrap", "Material UI",
   "DigitalOcean", "Headless CMS",
