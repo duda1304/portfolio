@@ -65,7 +65,7 @@ const projectCatalog: Project[] = [
     id: "restaurant-menu",
     title: "Restaurant menu web app (Konoba Bare)",
     category: "Full-stack development",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "WebSockets", "Google Translate API", "DigitalOcean"],
+    technologies: ["Next.js", "node.js", "MySQL", "WebSockets", "Google Translate API", "DigitalOcean"],
     bullets: [
       "Custom restaurant menu management system for a daily-changing food offer.",
       "Replaced manual Microsoft Word menu updates with a database-driven workflow for adding dishes, editing details and activating daily menu items.",
